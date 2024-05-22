@@ -10,10 +10,13 @@
   padding: 10px;
   z-index: 1;
   background-color: white;
+  flex-wrap: wrap;
+  background-size: contain;
 }
 .nav ul {
   display: flex;
   gap: 16;
+  flex-wrap: wrap;
 }
 .logo img {
   width: 40px;
@@ -22,10 +25,15 @@
   display: flex;
   align-items: center;
   color: var(--maincolor);
+  flex-wrap: wrap;
 }
 .header .logo .address {
   padding-left: 10px;
   font-weight: 700;
+}
+.buttons{
+  display:flex;
+  flex-wrap: wrap;
 }
 button {
   height: 50px;
@@ -49,25 +57,52 @@ button:last-child {
   border: none;
   font-weight: 700;
 }
+.bar-menu{
+  display: none;
+}
+@media (max-width:1100px) {
+  .nav{
+    display: none;
+  }
+.bar-menu{
+  display: flex;
+  width: 20px;
+  order: 1;
+}
+button{
+  display: none;
+}
+}
+@media (max-width:400px) {
+  .container {
+    width: calc(100% - 40px);
+  }
+}
 /*end of header*/
 
 /*start section Testimonials*/
 
-.Testimonials {
+.testimonials {
   padding: 80px;
   font-family: var(--mainfont);
+flex-wrap: wrap;
 }
-.Testimonial {
+.testimonials .row{
+  gap:40px;
+
+}
+.testimonial {
   display: flex;
   flex-direction: column;
-  width: calc((100% - 40px) / 2);
+ flex-basis: 400px;
   align-items: flex-start;
   box-shadow: 0px 8.23719596862793px 8.23719596862793px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  gap: 40px;
   position: relative;
+  flex-wrap: wrap;
+  flex-grow: 1;
 }
-.Testimonial::after {
+.testimonial::after {
   content: "";
   border-top: 60px solid #f4f4f4;
   border-left: 60px solid transparent;
@@ -93,7 +128,7 @@ button:last-child {
   border-radius: 50px;
   margin-bottom: 20px;
 }
-.Testimonials .Testimonial .profile-info .profile-data span {
+.testimonials .testimonial .profile-info .profile-data span {
   color: #969696;
 }
 .stars img {
@@ -105,10 +140,14 @@ button:last-child {
   flex-wrap: wrap;
   gap: 7px;
 }
-.Testimonial blockquote {
+.testimonial blockquote {
   color: #646464;
 }
+.testimonials h1{
+  text-align: center;
+  padding-bottom: 50px;
 
+}
 /*end of Testimonial section*/
 
 /*start of footer*/
@@ -118,10 +157,7 @@ button:last-child {
   color: white;
   padding: 50px 0;
   font-family: var(--mainfont);
-}
-.footer .footer-start,
-.footer .footer-end {
-  width: calc((100%-40px) / 2);
+  flex-wrap: wrap;
 }
 .footer .row {
   gap: 40px;
@@ -129,6 +165,14 @@ button:last-child {
 .footer-start p {
   color: #d0d0d0;
   margin-bottom: 40px;
+}
+.footer-start {
+  flex-basis: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+gap: 30px;
+flex-grow: 1;
 }
 .footer-end li {
   list-style: none;
@@ -142,9 +186,6 @@ button:last-child {
 .footer-start .logo a {
   padding-left: 10px;
   color: white;
-}
-.footer-start .logo {
-  margin-bottom: 30px;
 }
 .footer .footer-start .logo a {
   font-weight: 100px;
@@ -161,6 +202,9 @@ button:last-child {
   gap: 20px;
   flex-wrap: wrap;
 }
+.footer-end{
+  flex-grow: 1;
+}
 .footer .footer-end .footer-item h3 {
   margin-bottom: 20px;
 }
@@ -171,7 +215,4 @@ button:last-child {
 .footer .footer-end .row {
   justify-content: space-evenly;
   align-items: flex-start;
-}
-.footer .footer-end .footer-item {
-  margin-top: 50px;
 }
