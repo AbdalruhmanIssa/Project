@@ -31,8 +31,8 @@
   padding-left: 10px;
   font-weight: 700;
 }
-.buttons{
-  display:flex;
+.buttons {
+  display: flex;
   flex-wrap: wrap;
 }
 button {
@@ -57,44 +57,182 @@ button:last-child {
   border: none;
   font-weight: 700;
 }
-.bar-menu{
+.bar-menu {
   display: none;
 }
-@media (max-width:1100px) {
-  .nav{
+@media (max-width: 1100px) {
+  .nav {
     display: none;
   }
-.bar-menu{
-  display: flex;
-  width: 20px;
-  order: 1;
+  .bar-menu {
+    display: flex;
+    width: 20px;
+    order: 1;
+  }
+  button {
+    display: none;
+  }
 }
-button{
-  display: none;
-}
-}
-@media (max-width:400px) {
+@media (max-width: 400px) {
   .container {
     width: calc(100% - 40px);
   }
 }
 /*end of header*/
 
+/*start of courses*/
+.courses {
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.courses .row {
+  gap: 30px;
+  align-items: flex-start;
+}
+.course {
+  width: calc((100% - 30px) / 2);
+  box-shadow: 0px 7.437575340270996px 7.437575340270996px rgba(0, 0, 0, 0.05);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.course-items {
+  flex-basis: calc((100% - 30px) / 2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-grow: 1;
+}
+.course-available {
+  flex-basis: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+}
+.course-card img {
+  width: 100%;
+  filter: brightness(70%);
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.course-card {
+  position: relative;
+}
+.course-available p {
+  color: var(--subcolor);
+}
+.course-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.course-info span:first-of-type {
+  background-color: var(--maincolor);
+  padding: 10px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-top: 20px;
+}
+.course-info span:last-of-type {
+  align-self: flex-end;
+  font-size: 20px;
+  padding: 20px;
+}
+.course-available h1 {
+  color: #141e32;
+  font-size: 70px;
+}
+.course-available h6 {
+  color: var(--maincolor);
+  font-family: var(--subfont);
+  font-size: 12px;
+  padding-left: 10px;
+}
+.course-daitles {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.course-daitles .row:first-of-type {
+  justify-content: space-evenly;
+}
+.first-span {
+  color: var(--maincolor);
+}
+.sec {
+  padding-left: 32px;
+  font-size: 20px;
+  word-spacing: 5px;
+  color: var(--subcolor);
+}
+.one-twenty {
+  word-spacing: 1px;
+}
+@media (max-width: 1370px) {
+  .course-available {
+    flex-basis: 400px;
+    align-items: center;
+  }
+  .courses .row {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .first-span {
+    display: none;
+  }
+}
+@media (max-width: 1250px) {
+  .course-info {
+    display: none;
+  }
+  .course-available button {
+    display: initial;
+  }
+}
+@media (max-width: 650px) {
+  .course-items {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .course .sec {
+    display: none;
+  }
+  .first-span {
+    display: none;
+  }
+  .course .row:first-of-type {
+    font-size: 10px;
+  }
+}
+/*end of courses*/
+
 /*start section Testimonials*/
 
 .testimonials {
   padding: 80px;
   font-family: var(--mainfont);
-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-.testimonials .row{
-  gap:40px;
-
+.testimonials .row {
+  gap: 40px;
 }
 .testimonial {
   display: flex;
   flex-direction: column;
- flex-basis: 400px;
+  flex-basis: 400px;
   align-items: flex-start;
   box-shadow: 0px 8.23719596862793px 8.23719596862793px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -129,7 +267,7 @@ flex-wrap: wrap;
   margin-bottom: 20px;
 }
 .testimonials .testimonial .profile-info .profile-data span {
-  color: #969696;
+  color: var(--subcolor);
 }
 .stars img {
   width: 20px;
@@ -141,12 +279,11 @@ flex-wrap: wrap;
   gap: 7px;
 }
 .testimonial blockquote {
-  color: #646464;
+  color: var(--subcolor);
 }
-.testimonials h1{
+.testimonials h1 {
   text-align: center;
   padding-bottom: 50px;
-
 }
 /*end of Testimonial section*/
 
@@ -171,8 +308,8 @@ flex-wrap: wrap;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-gap: 30px;
-flex-grow: 1;
+  gap: 30px;
+  flex-grow: 1;
 }
 .footer-end li {
   list-style: none;
@@ -202,7 +339,7 @@ flex-grow: 1;
   gap: 20px;
   flex-wrap: wrap;
 }
-.footer-end{
+.footer-end {
   flex-grow: 1;
 }
 .footer .footer-end .footer-item h3 {

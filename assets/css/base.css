@@ -4,12 +4,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+font-family: var(--mainfont);
 }
 :root {
   --maincolor: #545be8;
   --mainfont: "Poppins", sans-serif;
   --subfont: "Inter", sans-serif;
+  --subcolor: #969696;
 }
 .header {
   display: flex;
