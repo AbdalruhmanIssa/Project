@@ -228,6 +228,60 @@ button {
 }
 /*end of features*/
 
+/*start of statistics*/
+.numbers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.number {
+  text-align: center;
+}
+.statistics {
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(180deg, #545be8 0%, #272db0 100%);
+}
+.statistics .row {
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: center;
+}
+.statistics img {
+  width: 30%;
+}
+.statistics-details {
+  flex-basis: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+.statistics-details p:first-of-type,
+.number h3 {
+  color: #f0c932;
+  font-family: var(--subfont);
+}
+.number span {
+  font-family: var(--subfont);
+  color: #dddddd;
+}
+.number h3 {
+  letter-spacing: 1px;
+}
+.statistics-details h2 {
+  font-size: 30px;
+}
+.statistics-details p:last-of-type {
+  color: #dddddd;
+}
+
+/*end of statistics*/
+
 /*start of courses*/
 .courses {
   padding: 40px 0;
@@ -307,14 +361,14 @@ button {
   padding-left: 10px;
   font-weight: normal;
 }
-.course-daitles {
+.course-details {
   padding: 20px 0;
   display: flex;
   flex-direction: column;
   gap: 16px;
   flex-wrap: wrap;
 }
-.course-daitles .row:first-of-type {
+.course-details .row:first-of-type {
   justify-content: space-evenly;
 }
 .first-span {
