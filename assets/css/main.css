@@ -42,7 +42,7 @@ button {
   font-family: var(--subfont);
   font-size: large;
 }
-button:first-of-type {
+.log-in {
   background-color: white;
   color: var(--maincolor);
   border-color: var(--maincolor);
@@ -51,9 +51,7 @@ button:first-of-type {
   font-weight: 700;
   margin-right: 10px;
 }
-.same-look,
-.course-finder button:first-child,
-.course-available button {
+.same-look {
   background-color: var(--maincolor);
   color: white;
   border: none;
@@ -117,6 +115,7 @@ button:first-of-type {
 }
 .buttons-course-finder {
   display: flex;
+
 }
 .video {
   border: 0;
