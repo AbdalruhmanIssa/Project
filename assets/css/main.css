@@ -42,7 +42,7 @@ button {
   font-family: var(--subfont);
   font-size: large;
 }
-button:first-child {
+button:first-of-type {
   background-color: white;
   color: var(--maincolor);
   border-color: var(--maincolor);
@@ -51,7 +51,9 @@ button:first-child {
   font-weight: 700;
   margin-right: 10px;
 }
-button:last-child {
+.same-look,
+.course-finder button:first-child,
+.course-available button {
   background-color: var(--maincolor);
   color: white;
   border: none;
@@ -69,7 +71,7 @@ button:last-child {
     width: 20px;
     order: 1;
   }
-  button {
+  .buttons {
     display: none;
   }
 }
@@ -80,6 +82,71 @@ button:last-child {
 }
 /*end of header*/
 
+/*start of course-discovery*/
+.course-discovery {
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.course-discovery .row {
+  gap: 30px;
+  align-items: flex-start;
+}
+.course-finder {
+  flex-basis: calc((100% - 20px) / 2);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+}
+.course-finder h1 {
+  font-size: 70px;
+  color: #141e32;
+}
+.course-finder h1 span {
+  color: var(--maincolor);
+}
+.course-finder p:first-of-type {
+  color: var(--maincolor);
+}
+.course-finder p span {
+  font-weight: bold;
+}
+.course-finder p:last-of-type {
+  color: var(--subcolor);
+}
+.buttons-course-finder {
+  display: flex;
+}
+.video {
+  border: 0;
+  background-color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video img {
+  width: 30%;
+  padding-right: 10px;
+}
+@media (max-width: 1200px) {
+  .course-discovery .row {
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+  .course-discovery .person-pic {
+    width: 100%;
+  }
+  .buttons-course-finder {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/*end of course-discovery*/
 /*start of courses*/
 .courses {
   padding: 40px 0;
@@ -157,6 +224,7 @@ button:last-child {
   font-family: var(--subfont);
   font-size: 12px;
   padding-left: 10px;
+  font-weight: normal;
 }
 .course-daitles {
   padding: 20px 0;
@@ -184,6 +252,7 @@ button:last-child {
   .course-available {
     flex-basis: 400px;
     align-items: center;
+    text-align: center;
   }
   .courses .row {
     flex-direction: column-reverse;
@@ -215,6 +284,9 @@ button:last-child {
   }
   .course .row:first-of-type {
     font-size: 10px;
+  }
+  .course-available h1 {
+    font-size: 40px;
   }
 }
 /*end of courses*/
