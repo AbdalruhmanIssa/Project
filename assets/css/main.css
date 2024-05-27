@@ -60,7 +60,7 @@ button {
 .bar-menu {
   display: none;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1120px) {
   .nav {
     display: none;
   }
@@ -78,6 +78,7 @@ button {
     width: calc(100% - 40px);
   }
 }
+
 /*end of header*/
 
 /*start of course-discovery*/
@@ -128,6 +129,12 @@ button {
   width: 30%;
   padding-right: 10px;
 }
+.person-pic {
+  animation-name: rightandleft;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
 @media (max-width: 1200px) {
   .course-discovery .row {
     align-items: center;
@@ -144,6 +151,24 @@ button {
     gap: 10px;
   }
 }
+@keyframes rightandleft {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(60px);
+  }
+}
+@media (max-width: 700px) {
+  @keyframes rightandleft {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
 /*end of course-discovery*/
 
 /*start of features*/
@@ -168,6 +193,11 @@ button {
   border-radius: 10px;
   flex-wrap: wrap;
   flex-grow: 1;
+  transform: translateY(0);
+  transition-duration: 1s;
+}
+.cards:hover {
+  transform: translateY(-10px);
 }
 .features-describtion {
   display: flex;
@@ -207,6 +237,7 @@ button {
   margin-right: 180px;
   gap: 20px;
   padding-top: 20px;
+  cursor: pointer;
 }
 .arrows img {
   width: 30px;
@@ -250,6 +281,9 @@ button {
 }
 .statistics img {
   width: 30%;
+  animation-name: moveUpDown;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 .statistics-details {
   flex-basis: 400px;
@@ -279,7 +313,15 @@ button {
 .statistics-details p:last-of-type {
   color: #dddddd;
 }
-
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
 /*end of statistics*/
 
 /*start of courses*/
@@ -383,21 +425,34 @@ button {
 .one-twenty {
   word-spacing: 1px;
 }
+.course:hover {
+  transform: scale(1.1);
+}
+.course {
+  transition-duration: 2s;
+}
 @media (max-width: 1370px) {
   .course-available {
     flex-basis: 400px;
     align-items: center;
     text-align: center;
   }
+  .course-items {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
   .courses .row {
     flex-direction: column-reverse;
     align-items: center;
+    justify-content: flex-end;
   }
   .first-span {
     display: none;
   }
-}
-@media (max-width: 1250px) {
+  .sec {
+    display: none;
+  }
   .course-info {
     display: none;
   }
@@ -447,6 +502,11 @@ button {
   position: relative;
   flex-wrap: wrap;
   flex-grow: 1;
+  transform: translateY(0);
+  transition-duration: 1s;
+}
+.testimonial:hover {
+  transform: translateY(-10px);
 }
 .testimonial::after {
   content: "";
@@ -529,9 +589,6 @@ button {
   list-style: none;
 }
 .footer-start .logo img {
-  width: 30px;
-}
-.footer-start .logo img {
   width: 40px;
 }
 .footer-start .logo a {
@@ -566,4 +623,11 @@ button {
 .footer .footer-end .row {
   justify-content: space-evenly;
   align-items: flex-start;
+}
+.face {
+  border: 1px solid white;
+  width: 15px;
+  height: 15px;
+  padding: 10px;
+  box-sizing: content-box;
 }

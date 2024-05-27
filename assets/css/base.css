@@ -18,6 +18,7 @@ font-family: var(--mainfont);
 }
 a {
   text-decoration: none;
+  
 }
 .nav ul {
   list-style: none;
@@ -36,4 +37,10 @@ a {
 }
 ul{
   list-style: none; 
+}
+button{
+  cursor: pointer;
+}
+a:visited {
+  color: inherit; /* or specify the color you want */
 }
