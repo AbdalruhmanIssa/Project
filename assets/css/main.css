@@ -424,6 +424,7 @@ button {
     font-size: 40px;
   }
 }
+
 /*end of courses*/
 
 /*start section Testimonials*/
@@ -492,6 +493,12 @@ button {
   text-align: center;
   padding-bottom: 50px;
 }
+@media (max-width: 480px) {
+  .profile-info {
+    flex-direction: column;
+  }
+}
+
 /*end of Testimonial section*/
 
 /*start of footer*/
