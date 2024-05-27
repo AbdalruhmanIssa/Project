@@ -60,6 +60,11 @@ button {
 .bar-menu {
   display: none;
 }
+.logo a:visited{
+  color: var(--maincolor);
+}
+.nav ul li a:visited{
+  color: black;}
 @media (max-width: 1120px) {
   .nav {
     display: none;
@@ -431,6 +436,9 @@ button {
 .course {
   transition-duration: 2s;
 }
+.course-details a:visited h2{
+  color: black;
+}
 @media (max-width: 1370px) {
   .course-available {
     flex-basis: 400px;
@@ -630,4 +638,8 @@ button {
   height: 15px;
   padding: 10px;
   box-sizing: content-box;
+}
+.footer-item ul li a:visited{
+  color: #d0d0d0;
+
 }
