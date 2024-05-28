@@ -64,7 +64,12 @@ button {
   color: var(--maincolor);
 }
 .nav ul li a:visited,.nav ul li a{
-  color: black;}
+  color: black;
+}
+  .nav ul li a:hover{
+    font-weight: bold;
+    transition-duration: .3s;
+    }
 @media (max-width: 1120px) {
   .nav {
     display: none;
@@ -83,6 +88,7 @@ button {
     width: calc(100% - 40px);
   }
 }
+
 
 /*end of header*/
 
@@ -642,4 +648,8 @@ button {
 .footer-item ul li a:visited,.footer-item ul li a{
   color: #d0d0d0;
 
+}
+.footer-item ul li a:hover{
+  color: white;
+  transition-duration: .3s;
 }
